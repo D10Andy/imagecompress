@@ -1,0 +1,5 @@
+function y=DWT_quant(x);
+[a,b]=size(x)
+quant=ones(a,b)
+quant(1:a/2,1:b/2)=2
+y=x.*quant

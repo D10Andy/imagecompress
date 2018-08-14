@@ -1,0 +1,15 @@
+function vector_X = matix2vector(temp_matrix, m, n, lab)
+ 
+
+if lab == 1          %按行
+    for i = 1 : m
+       vector_X(n*(i-1)+1 : n*i) = temp_matrix(i, n*(i-1)+1 : n*i);
+    end;
+end;
+if lab == 0      %按列
+    for i = 1 : n
+         vector_X(m*(i-1)+1 : m*i) = temp_matrix(m*(i-1)+1 : m*i, i);
+    end;
+end;
+
+    
